@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragonGate - Modern Auth UI</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Dragon Art Section -->
+        <div class="dragon-art">
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Auth Forms -->
+        <div class="auth-forms">
+            <!-- Login -->
+            <div class="form-container sign-in">
+                <h2>Welcome Back</h2>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button class="primary-btn">Sign In</button>
+                </form>
+                <p class="toggle-form">New user? <span onclick="switchForm('sign-up')">Sign Up</span></p>
+            </div>
+
+            <!-- Sign Up -->
+            <div class="form-container sign-up">
+                <h2>Create Account</h2>
+                <form>
+                    <input type="text" placeholder="Username" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button class="primary-btn">Sign Up</button>
+                </form>
+                <p class="toggle-form">Already a user? <span onclick="switchForm('sign-in')">Sign In</span></p>
+            </div>
+
+            <!-- Social Auth -->
+            <div class="social-auth">
+                <div class="divider"><span>Or continue with</span></div>
+                <div class="social-icons">
+                    <a href="#" class="google"><i class="fab fa-google"></i></a>
+                    <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="github"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchForm(formType) {
+            const container = document.querySelector('.container');
+            container.classList.remove('sign-in', 'sign-up');
+            container.classList.add(formType);
+        }
+    </script>
+</body>
+</html>
