@@ -3,54 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DragonGate - Modern Auth UI</title>
-    <!-- Font Awesome Icons -->
+    <title>DragonAuth</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <!-- Dragon Art Section -->
-        <div class="dragon-art">
-            <div class="overlay"></div>
+        <button class="form-toggle" onclick="toggleForm()">
+            <span id="toggleText">Sign Up</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+        
+        <div class="img-section">
+            <h1>DragonAuth</h1>
+            <p>Join our community and unlock exclusive features with your dragon companion</p>
+            <button class="toggle-btn" onclick="toggleForm()" id="imgToggleBtn">
+                Login Now
+            </button>
         </div>
-
-        <!-- Auth Forms -->
-        <div class="auth-forms">
-            <!-- Login -->
-            <div class="form-container sign-in">
-                <h2>Welcome Back</h2>
-                <form>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
-                    <button class="primary-btn">Sign In</button>
-                </form>
-                <p class="toggle-form">New user? <span onclick="switchForm('sign-up')">Sign Up</span></p>
-            </div>
-
-            <!-- Sign Up -->
-            <div class="form-container sign-up">
-                <h2>Create Account</h2>
-                <form>
-                    <input type="text" placeholder="Username" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
-                    <button class="primary-btn">Sign Up</button>
-                </form>
-                <p class="toggle-form">Already a user? <span onclick="switchForm('sign-in')">Sign In</span></p>
-            </div>
-
-            <!-- Social Auth -->
-            <div class="social-auth">
-                <div class="divider"><span>Or continue with</span></div>
-                <div class="social-icons">
-                    <a href="#" class="google"><i class="fab fa-google"></i></a>
-                    <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="github"><i class="fab fa-github"></i></a>
+        
+        <div class="form-section">
+            <div class="form-container">
+                <!-- Login Form -->
+                <div class="form">
+                    <h2>Welcome Back</h2>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <button type="submit">Login</button>
+                    </form>
+                    <div class="social-auth">
+                        <div class="social-btn fb"><i class="fab fa-facebook"></i></div>
+                        <div class="social-btn gh"><i class="fab fa-github"></i></div>
+                        <div class="social-btn google"><i class="fab fa-google"></i></div>
+                    </div>
+                    <div class="toggle-form">
+                        <span>Don't have an account? </span>
+                        <a onclick="toggleForm()">Sign Up</a>
+                    </div>
+                </div>
+                
+                <!-- Register Form -->
+                <div class="form">
+                    <h2>Create Account</h2>
+                    <form>
+                        <div class="input-group">
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <button type="submit">Register</button>
+                    </form>
+                    <div class="social-auth">
+                        <div class="social-btn fb"><i class="fab fa-facebook"></i></div>
+                        <div class="social-btn gh"><i class="fab fa-github"></i></div>
+                        <div class="social-btn google"><i class="fab fa-google"></i></div>
+                    </div>
+                    <div class="toggle-form">
+                        <span>Already have an account? </span>
+                        <a onclick="toggleForm()">Sign In</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
